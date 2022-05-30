@@ -1,0 +1,285 @@
+/*Universal*/
+html{
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+.center{
+    text-align: center;
+}
+img{
+    display: block;
+    overflow:hidden ;
+}
+a{
+    text-decoration: none;
+}
+
+/*Header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #122620;
+    font-size: 1.125rem;
+}
+.logo-container img{
+    height: 6rem;
+    padding: .75rem 7%;
+}
+nav ul{
+    margin-right: 2rem;
+}
+nav li{
+    display: inline-block;
+    padding-left: 2rem;
+}
+nav a{
+    color: #D3FFEB;
+}
+.button{
+    background-color: #D6AD60;
+    padding: .5rem .9rem;
+    border-radius: 15px;
+    margin-left: .7rem;
+}
+.small-nav{
+    display: none;
+}
+@media only screen and (max-width:945px){
+    header{
+        flex-direction: column;
+    }
+    .logo-container img{
+        height: 3rem;
+        padding: .3rem 0;
+    }
+    nav{
+        padding-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width:760px){
+    nav{
+        display: none;
+    }
+    header{
+        flex-direction: row;
+    }
+    .logo-container img{
+        height: 4rem;
+        padding: .3rem .8rem;
+    }
+    .small-nav{
+        display: flex;
+        padding: 0 .8rem;
+    }
+    .small-nav img{
+        width: 1.5rem;
+        padding-left: .7rem;
+    }
+}
+
+/*Event*/
+.events{
+    padding: 3rem 0;
+    /*margin-top: 4vw;*/
+    background-color: #F4EBD0;
+}
+.events h1{
+    font-family: 'Satisfy', cursive;
+    /*text-transform: uppercase;*/
+    font-weight: 500;
+    font-size: 3rem;
+}
+.event{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 3%;
+}
+.col{
+    flex:24%;
+    max-width:24%;
+    padding: 0 0.1rem;
+}
+
+.event img{
+    width: 100%;
+    height: auto;
+    margin-top:0.3rem;
+    /*vertical-align: middle;*/
+}
+@media only screen and (max-width:760px){
+    .col{
+        flex: 48%;
+        max-width: 48%;
+    }
+    .events h1{
+        font-size: 2.5rem;
+    }   
+}
+@media only screen and (max-width:555px){
+    .col{
+        flex:100%;
+        max-width: 100%;
+    }
+    .events h1{
+        font-size: 2rem;
+    }   
+}
+
+/*Meet Us*/
+.meet-us{
+    display: grid;
+    gap:.7rem;
+    grid-template-columns: 1fr 2fr;
+    background-color: #A0E7E5;
+    padding: 3rem 4%;
+}
+.info h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.info p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+.schedule{
+    justify-self: center;
+    align-self: center;
+}
+.schedule table{
+    width: 100%;
+    border: 2px solid #122620;
+    font-size: 1.3rem;
+    border-collapse: collapse;
+}
+.schedule table td{
+    padding: .5rem;
+}
+.schedule table th{
+    text-align: left;
+    font-style: italic;
+    font-weight: 600;
+    background-color: #F4EBD0;
+    padding: .8rem .5rem;
+}
+.schedule table tr{
+    border-top: 1px solid #122620;
+}
+
+@media only screen and (max-width:760px){
+    .meet-us{
+        grid-template-columns: 1fr;
+    }
+    .info h2{
+        font-size: 2rem;
+    }
+    .info p{
+        padding:.5rem 0;
+        font-size: 1rem;
+    }
+    .schedule table{
+        font-size: 1.1rem;
+    }
+    .schedule table th, .schedule table tr{
+        padding:.3rem;
+    }
+}
+
+/*Dances*/
+
+.dances{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 4%;
+    background-color: #F3E1C0;
+}
+.dance{
+    display: flex;
+    align-items: flex-end;
+    flex: 1 20%;
+    max-width: 20%;
+    height: 30rem;
+    color: #F5F5F5;
+    font-size: 1.3rem;
+    letter-spacing: .1rem;
+}
+.card-info{
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding: 2rem .7rem;
+}
+#flamenco{
+    background-image: url("../images/flamenco.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#hiphop{
+    background-image: url("../images/hiphop.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#indian{
+    background-image: url("../images/indian-style.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#salsa{
+    background-image: url("../images/salsa.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#tango{
+    background-image: url("../images/tango.jpg");
+    background-position: center;
+    background-size: cover;
+}
+@media only screen and (max-width:855px){
+    .dance{
+        flex: 1 50%;
+        max-width: 50%;
+        height: 25rem;    
+    }
+}
+@media only screen and (max-width:440px){
+    .dance{
+        flex: 1 100%;
+        max-width: 100%;
+        height: 25rem;    
+    }
+}
+
+/*Footer*/
+footer{
+    background-color: #122620;
+    color: #fffafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem .875rem;
+}
+footer a{
+    color: #D6AD60;
+    font-style: italic;
+    font-weight: 700;
+}
+.social img{
+    display: inline;
+    width: 1.875rem;
+    margin-right: .2rem;
+}
+.button-color{
+    filter: invert(100%) sepia(3%) saturate(7499%) hue-rotate(340deg) brightness(108%) contrast(107%);
+}
+
+@media only screen and (max-width:900px){
+    footer{
+        flex-direction: column;
+    }
+    .social{
+        padding: .8rem 0;
+    }
+}
